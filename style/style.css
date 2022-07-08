@@ -30,6 +30,23 @@ label {
   color: var(--text-accent-color);
 }
 
+dialog {
+  border: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+input,
+textarea {
+  background-color: var(--text-edit-bg-color);
+  color: var(--smokywhite);
+  font-size: 1.5em;
+}
+
 * {
   outline: 0;
   box-sizing: border-box;
@@ -60,21 +77,21 @@ body {
   text-align: center;
 }
 
-.banner_title {
+.banner__title {
   margin: 20px;
   color: var(--accent-color);
 }
 
-.control-pannel {
+.control-panel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.create-button {
+.create-button,
+.dialog__submit {
   margin: 0.1em 0.2em;
   text-align: center;
-  /* text 드래깅 못하게 */
   user-select: none;
   padding: 1em 3em;
   text-transform: uppercase;
@@ -85,11 +102,11 @@ body {
   border-color: var(--accent-color);
   border-radius: 2px;
 }
-
 .document {
   height: 100%;
+  overflow-y: auto;
   background-color: var(--document-bg-color);
-  /* firefox */
+  /* Firefox */
   scrollbar-width: 6px;
   scrollbar-color: var(--bg-accent-color);
   scrollbar-face-color: var(--accent-color);
@@ -107,7 +124,7 @@ body {
 }
 
 .footer {
-  background-color: var(--bg-main-color);
+  background: var(--bg-main-color);
   border-top: 1px solid var(--border-color);
   text-align: center;
 }
